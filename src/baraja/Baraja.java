@@ -11,8 +11,18 @@ public class Baraja {
 		
 		cartas = new Carta[52];
 
+		int posicion = 0;
 		for(int i=0;i<13;i++) {
-			cartas[i] = creadorCarta(i+1,'C');
+			cartas[posicion++] = creadorCarta(i+1,'C');
+		}
+		for(int i=0;i<13;i++) {
+			cartas[posicion++] = creadorCarta(i+1,'P');
+		}
+		for(int i=0;i<13;i++) {
+			cartas[posicion++] = creadorCarta(i+1,'T');
+		}
+		for(int i=0;i<13;i++) {
+			cartas[posicion++] = creadorCarta(i+1,'D');
 		}
 	}
 
@@ -48,7 +58,7 @@ public class Baraja {
 
 	@Override
 	public String toString() {
-		return "Baraja [" + Arrays.toString(cartas) + "]";
+		return "Baraja " + Arrays.toString(cartas) ;
 	}
 	
 	
