@@ -63,4 +63,65 @@ public class Baraja {
 	
 	
 	
+	
+	public void voltearCarta(char valor, char palo) {
+		
+		//Buscar Carta --valor, palo--
+		System.out.println(buscarCarta(valor,palo));
+		System.out.println(buscarIndiceCarta(valor,palo));
+		
+		//dar vuelta carta
+		
+	}
+	
+	
+	/**
+	 * Esta operación buscar una carta y devulve el objeto carta
+	 * que se encuentra en el vector
+	 * 
+	 * @param valor de la carta
+	 * @param palo de la carta
+	 * @return una Carta que está en "cartas"
+	 */
+	private Carta buscarCarta(char valor, char palo) {
+		
+		Carta devolver = null;
+		int i = 0;
+		boolean encontrado = false;
+		
+		while((i<cartas.length)&&(!encontrado)) {
+			
+			if(cartas[i].getValor()==valor 
+			   && cartas[i].getPalo()==palo) {
+				
+				encontrado = true;
+				devolver = cartas[i];
+			}
+			i++;
+		}
+		return devolver;
+	}
+	
+	
+	
+	private int buscarIndiceCarta(char valor, char palo) {
+		
+		int devolver = -1;
+		int i = 0;
+		boolean encontrado = false;
+		
+		while((i<cartas.length)&&(!encontrado)) {
+			
+			if(cartas[i].getValor()==valor 
+			   && cartas[i].getPalo()==palo) {
+				
+				encontrado = true;
+				devolver = i;
+			}
+			i++;
+		}
+		return devolver;
+	}
+	
+	
 }
