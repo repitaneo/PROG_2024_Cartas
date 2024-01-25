@@ -67,11 +67,12 @@ public class Baraja {
 	public void voltearCarta(char valor, char palo) {
 		
 		//Buscar Carta --valor, palo--
-		System.out.println(buscarCarta(valor,palo));
-		System.out.println(buscarIndiceCarta(valor,palo));
-		
+		Carta carta = buscarCarta(valor,palo);
+		int posicion = buscarIndiceCarta(valor,palo);
+
 		//dar vuelta carta
-		
+		carta.setBocaArriba(false);
+		cartas[posicion].setBocaArriba(false);
 	}
 	
 	
