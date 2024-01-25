@@ -76,6 +76,9 @@ public class Baraja {
 	}
 	
 	
+	
+	
+	
 	/**
 	 * Esta operación buscar una carta y devulve el objeto carta
 	 * que se encuentra en el vector
@@ -123,6 +126,44 @@ public class Baraja {
 		}
 		return devolver;
 	}
+	
+	
+	
+	
+	
+	private void intercambiar(int pos1, int pos2) {
+		
+		Carta temporal = cartas[pos1];
+		cartas[pos1] = cartas[pos2];
+		cartas[pos2] = temporal;
+	}
+	
+	
+	
+	
+	
+	public void barajar() {
+	
+		// 20 veces saco 20 posiciones distintas 
+		int i=0;
+		while(i<2000) { 
+		
+			int pos1 = (int)(Math.random()*52);
+			int pos2 = (int)(Math.random()*52);
+			// y las intercambio si son distintos
+			if(pos1!=pos2) {
+				
+				intercambiar(pos1, pos2);
+				i++;
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
 	
 	
 }

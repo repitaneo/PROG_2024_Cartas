@@ -7,8 +7,9 @@ public class Start {
 		Baraja deck = new Baraja();
 		System.out.println(deck);
 		
-		deck.voltearCarta('A', 'C');
-		deck.voltearCarta('2', 'C');
+		//deck.voltearCarta('A', 'C');
+		//deck.voltearCarta('2', 'C');
+		deck.barajar();
 		System.out.println(deck);
 	}
 	
